@@ -1,5 +1,3 @@
-import { BigNumber } from "ethers";
-
 export class RequestTokens {
     address: string;
     amount: string;

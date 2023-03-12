@@ -7,9 +7,14 @@ import { RequestTokens } from './dtos/RequestToken.dto';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get('contract-address')
+  @Get('token-address')
+  getTokenAddress(): Address {
+    return  new Address(this.appService.getTokenAddress());
+  }
+
+  @Get('ballot-address')
   getContractAddress(): Address {
-    return  new Address(this.appService.getContractAddress());
+    return  new Address(this.appService.getBallotAddress());
   }
 
   @Get('total-supply')

@@ -24,8 +24,12 @@ export class AppService {
     );
   }
 
-  getContractAddress(): string {
+  getTokenAddress(): string {
     return TOKEN_CONTRACT_ADDRESS;
+  }
+
+  getBallotAddress(): string {
+    return BALLOT_CONTRACT_ADDRESS;
   }
 
   async getTotalSupply(): Promise<number> {
